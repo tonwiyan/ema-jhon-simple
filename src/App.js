@@ -11,6 +11,7 @@ import {
 import Inventory from './components/Inventory/Inventory';
 import Review from './components/Review/Review';
 import NotFound from './components/Product/NotFound';
+import ProductDetails from './components/ProductDetails/ProductDetails';
 
 function App() {
   return (
@@ -30,6 +31,9 @@ function App() {
           <Route exact path='/'>
             <ShopInfo></ShopInfo>
           </Route>
+          <Route path='/product/:productKey'>
+            <ProductDetails></ProductDetails>
+          </Route>
           <Route path='*'>
             <NotFound></NotFound>
           </Route>
@@ -37,7 +41,7 @@ function App() {
       </Router>
       {/* 
       <ShopInfo></ShopInfo> */}
-    </div>
+    </div >
   );
 }
 
